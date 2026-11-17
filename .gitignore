@@ -1,0 +1,7 @@
+.env
+careerpilot.db
+__pycache__/
+.pytest_cache/
+.venv/
+web/node_modules/
+web/.next/

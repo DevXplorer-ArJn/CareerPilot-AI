@@ -1,0 +1,48 @@
+:root {
+  --ink: #172121;
+  --muted: #66716f;
+  --paper: #f7f8f3;
+  --card: #ffffff;
+  --accent: #e7673f;
+  --line: #dde4de;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, sans-serif; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.shell { max-width: 1180px; margin: 0 auto; padding: 48px 24px 80px; }
+.hero { max-width: 760px; margin-bottom: 36px; }
+.eyebrow, .source { color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .14em; }
+h1 { font-size: clamp(42px, 7vw, 78px); line-height: .98; letter-spacing: -.06em; margin: 14px 0 20px; }
+h2 { font-size: 22px; margin: 0 0 18px; }
+h3 { font-size: 21px; margin: 6px 0; }
+.subtitle { color: var(--muted); font-size: 18px; line-height: 1.5; }
+.search-card, .account-card, .job-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; }
+.search-card { padding: 22px; margin-bottom: 32px; }
+label { display: block; font-weight: 700; margin-bottom: 10px; }
+.search-row { display: flex; gap: 10px; }
+input { width: 100%; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); }
+button { border: 0; border-radius: 10px; padding: 0 20px; background: var(--accent); color: white; font-weight: 700; }
+button:disabled { opacity: .6; cursor: wait; }
+.columns { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 28px; }
+.job-list { display: grid; gap: 14px; }
+.job-card { padding: 20px; display: flex; justify-content: space-between; gap: 20px; }
+.job-card p { color: var(--muted); line-height: 1.45; }
+.job-card .source { margin: 0; }
+.meta { font-size: 14px; }
+.actions { display: flex; align-items: flex-start; gap: 12px; white-space: nowrap; }
+.actions a { color: var(--ink); font-weight: 700; padding-top: 12px; }
+.account-card { padding: 22px; height: fit-content; }
+.auth-form { display: grid; gap: 10px; }
+.auth-form button { min-height: 44px; }
+.secondary { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.saved-item { display: grid; gap: 4px; padding: 13px 0; border-top: 1px solid var(--line); color: var(--ink); text-decoration: none; }
+.saved-item span, .muted { color: var(--muted); font-size: 14px; line-height: 1.4; }
+.error { color: #b42318; margin: 14px 0 0; }
+@media (max-width: 760px) {
+  .columns { grid-template-columns: 1fr; }
+  .search-row, .job-card { flex-direction: column; }
+  .search-row button { min-height: 48px; }
+  .actions { align-items: center; }
+}
